@@ -1,23 +1,111 @@
+<!DOCTYPE html>
 {% load staticfiles %}
     <html>
         <head>
-            <title>Genglv iHuman CNPDatabase</title>
+			<!--<link rel="icon" href="F:/djangogirls/main.ico" type="image/x-ico"/> --><!-- 标题加入小图标 -->
+            <title>iHuman Natural Products Database</title>
 			<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+			<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+			<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
         </head>
         <body>
-            <div class="page-header">
-                <h1><a href="/">Genglv iHuman CNPDatabase</a></h1>
-            </div>
+			<div class = "pic">
+				<img src = "http://58pic.ooopic.com/58pic/14/89/62/07T58PIC8jM.jpg" height=55px width=55px/>
+			</div>
+            <div class="page-header" align=center>
+				<h1>iHuman Natural Products Database</h1>
+			</div>
+            
 
-            {% for post in posts %}
+<!-- 旋转木马 -->
+	<div class="col-md-12">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators小圆圈 -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides 具体内容-->
+        <div  align=center class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="http://img10.360buyimg.com/imgzone/g13/M01/07/1E/rBEhVFIaz44IAAAAAAHeQDc373cAACcdADwLHMAAd5Y788.jpg" alt="anohter picture!">
+                <div class="carousel-caption">
+                   <div class="carousel-caption">
+					<h2>Build alignments</h2>
+                        <p>Select proteins to align individually or by family. Choose custom sequence segments to
+                        include in your alignment.</p>
+                   </div>
+                </div>
+            </div>
+            <div  align=center class="item">
+                <img src="http://img11.360buyimg.com/cms/g13/M07/19/0D/rBEhUlMVbv8IAAAAAAON9CxKv6oAAJbiwIRC40AA44M021.jpg" alt="anohter picture!">
+                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <h2>Build diagrams</h2>
+                        <p>Get helix box and/or snake diagrams with custom coloring for you publications.</p>
+                    </div>
+                </div>
+            </div>
+            <div  align=center class="item">
+                <img src="http://img13.360buyimg.com/cms/g14/M07/16/18/rBEhVlMecNcIAAAAAAOKnKdnewwAAJ74gNU8zkAA4q0407.jpg" alt="anohter picture!">
+                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <h2>Automatically add generic numbers to PDB files</h2>
+                        <p>Upload PDB files and apply GPCRdb generic numbers.</p>
+                    </div>
+                </div>
+            </div>
+            <div  align=center class="item">
+                <img src="http://img11.360buyimg.com/cms/jfs/t160/15/2313190601/117256/febbdee1/53cca296N3578ae8e.jpg" alt="anohter picture!">
+                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <h2>Plot experimental values onto diagrams</h2>
+                        <p>Highlight residues with available mutant and/or ligand interaction data.</p>
+                    </div>
+                </div>
+            </div>
+            <div  align=center class="item">
+                <img src="http://img11.360buyimg.com/cms/jfs/t685/296/67441370/89486/b07a563d/544b5410N95644309.jpg" alt="anohter picture!">
+                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <h2>Build phylogenetic trees</h2>
+                        <p>Customise the sequence segments to use for generating the trees.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls 上一页，下一页-->
+        <div><a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+		</div>
+		<div>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+		<div>
+</div>
+
+
+
+
+          <!--  {% for post in posts %}
                 <div class="post">
                     <p>published: {{ post.published_date }}</p>
                     <h1><a href="">{{ post.title }}</a></h1>
                     <p>{{ post.text|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
+                </div>   
+            {% endfor %}-->
         </body>
     </html>
